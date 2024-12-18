@@ -1,0 +1,713 @@
+@media screen and (min-width:890px){
+    
+body{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.home{
+    background-color: #edede9;
+}
+.home__img {
+    background-image: url("https://pas-pol.jp/wp-content/uploads/2014/11/main_visual_2-0x0.jpg");
+    height: 95vh;
+    display: flex;
+    background-size: cover;
+    background-position: center;
+    border-radius: 0 0 350px 350px / 0 0 50px 50px; /* 横と縦に別々の丸み */
+}
+
+.home__img__logo {
+    background: url("https://pas-pol.jp/wp-content/themes/pas-pol/dist/img/siteLogo-pc@2x.png") no-repeat;
+    width: 280px;
+    height: 90px;
+    background-size: contain;
+    background-position: center;
+    display: inline-block;
+    position: relative; /* ホバー時の背景色を表示するために必要 */
+    margin-left: 150px;
+    margin-top: 40px;
+    transition: opacity 0.5s; /* 透明度の変化に1秒かける */
+}
+.home__img__toggle{
+    display: none;
+}
+.home__img__menu{
+    margin-left: auto;
+    margin-top: 70px;
+    margin-right: 60px;
+}
+
+.home__img__menu a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    margin-left: 20px;
+    position: relative; /* ホバー時の下線を表示するために必要 */
+}
+.home__img__menu a::after {
+    background-color: #fff; /* 下線の色 */
+    bottom: -4px; /* 要素の下端からの距離 */
+    content: ""; /* 要素に内容を追加 */
+    height: 2px; /* 下線の高さ */
+    left: 0; /* 要素の左端からの距離 */
+    position: absolute; /* 絶対位置指定 */
+    transform: scale(0, 1); /* 下線を横方向に0倍、縦方向に1倍に変形（非表示） */
+    transform-origin: left top; /* 変形の原点を左上に指定 */
+    transition: transform .3s; /* 変形をアニメーション化 */
+    width: 100%; /* 要素の幅 */
+}
+.home__img__menu a:hover::after {
+    transform: scale(1, 1); /* 下線を横方向に1倍、縦方向に1倍に変形（表示） */
+}
+
+
+.home__img__logo:hover{ 
+    opacity: 0.5; /* 半透明に調整 */
+    
+    
+}
+.home__message{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.home__message__text{
+    padding-top: 150px;
+    padding-bottom: 150px;
+    line-height:2;
+    font-size: 20px;
+    letter-spacing: 2px; /* 文字の間隔を広くする */
+}
+
+.home__message__text__h1{
+    text-align: center;
+}
+
+
+
+
+/* product */
+.product{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.product__block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15vw;
+    padding: 50px;
+}
+.product__block__button{
+    border: black solid 1px;
+    background-color: white;
+    width: 175px;
+    height: 50px;
+    transition: color 0.5s, background-color 0.5s;
+}
+.product__block__button:hover{
+    color: white;
+    background-color: black;
+}
+
+.product__link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    width: 50%;
+}
+.product__link__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: inherit; /* 親要素の色を継承 */
+    font-weight: bold;
+    transition: opacity 0.5s; 
+}
+.product__link__item:hover {
+    opacity: 0.5;
+}
+.product__link__item__img{
+    width: 200px;
+    height: 300px;
+    border-radius: 5px 30px 30px 5px;
+    object-fit: cover; /* 画像のアスペクト比を維持しながら、要素に収める */
+}
+
+
+
+/* NEWS */
+.news{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #edede9;
+}
+.news__block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 400px;
+    padding: 50px;
+}
+.news__block__button{
+    border: black solid 1px;
+    width: 175px;
+    height: 50px;
+    transition: color 0.5s, background-color 0.5s;
+}
+.news__block__button:hover{
+    color: white;
+    background-color: black;
+}
+
+.news__link{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transition: opacity 1s;
+}
+.news__link :hover{
+    opacity: 0.90;
+}
+
+.news__link__item {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit; /* 親要素の色を継承 */
+    gap: 30px;
+    margin-bottom: 60px;
+    align-items: flex-start; /* 子要素を上詰めで配置 */
+}
+.news__link__item__img{
+    width: 350px;
+    height: 200px;
+    object-fit: cover; /* 画像のアスペクト比を維持しながら、要素に収める */
+}
+.news__link__item h3,
+.news__link__item p {
+    margin: 0; /* マージンをなくす */
+}
+
+
+/* sns */
+.sns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.sns__button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    font-size: 150%;
+    background-color: white;
+    margin-top: -15px;
+    transition: transform 0.3s;
+}
+
+.sns__button:hover{
+    transform: scale(1.1) translateY(-7px);
+}
+.sns__block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    gap: 50px;
+}
+.sns__block__first{
+    border: #0077b6 solid 1px;
+    background-color: white;
+    color: #0077b6;
+    width: 175px;
+    height: 50px;
+    transition: color 0.3s, background-color 0.3s;
+}
+.sns__block__first:hover{
+    color: white;
+    background-color: #0077b6;
+}
+.sns__block__second{
+    border: #00b4d8 solid 1px;
+    background-color: white;
+    color: #00b4d8;
+    width: 175px;
+    height: 50px;
+    transition: color 0.3s, background-color 0.3s;
+}
+.sns__block__second:hover{
+    color: white;
+    background-color: #00b4d8;
+}
+.sns__block__third{
+    border: #90e0ef solid 1px;
+    background-color: white;
+    color: #90e0ef;
+    width: 175px;
+    height: 50px;
+    transition: color 0.3s, background-color 0.3s;
+}
+.sns__block__third:hover{
+    color: white;
+    background-color: #90e0ef;
+}
+
+
+
+/* footer */
+.footer__menu{
+    background-color: #6c757d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+.footer__menu a{
+    text-decoration: none;
+    color:white;
+    font-size: 15px;
+    margin-left: 30px;
+    position: relative; /* ホバー時の下線を表示するために必要 */
+}
+.footer__logo{
+    background-color: #343a40;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 200px;
+    padding: 30px;
+}
+.footer__logo p{
+    color: white;
+    font-size: 10px;
+}
+.footer__logo__img{
+    width: 90px;
+    height: 90px;
+    object-fit: cover; /* 画像のアスペクト比を維持しながら、要素に収める */
+    display: inline-block;
+    position: relative; /* ホバー時の背景色を表示するために必要 */
+    transition: opacity 0.5s; /* 透明度の変化に1秒かける */
+}
+.footer__logo__img:hover{ 
+    opacity: 0.5; /* 半透明に調整 */
+}
+}
+
+
+
+
+
+
+@media screen and (max-width: 889px) {
+    @keyframes slideDown {
+        from {
+            max-height: 0;
+            opacity: 0;
+            transform: translateY(-230px);
+        }
+        to {
+            max-height: 500px; /* 適切な最大高さを設定 */
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    @keyframes slideUp {
+        from {
+            max-height: 500px; /* 適切な最大高さを設定 */
+            opacity: 1;
+            transform: translateY(0);
+        }
+        to {
+            max-height: 0;
+            opacity: 0;
+            transform: translateY(-230px);
+        }
+    }
+    
+    @keyframes slideDown__button{
+        from {
+            max-height: 0;
+            opacity: 0;
+            transform: translateY(0px);
+        }
+        to {
+            max-height: 500px; /* 適切な最大高さを設定 */
+            opacity: 1;
+            transform: translateY(230px);
+        }
+    }
+    @keyframes slideUp__button{
+        from {
+            max-height: 500px; /* 適切な最大高さを設定 */
+            opacity: 1;
+            transform: translateY(230px);
+        }
+        to {
+            max-height: 500px;
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+    
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .home__img {
+        display: flex;
+        justify-content: center; /* 水平方向に中央揃え */
+        align-items: center; /* 垂直方向に中央揃え */
+        height: 100vh;
+        background-image: url("https://pas-pol.jp/wp-content/uploads/2014/11/main_visual_2-0x0.jpg");
+        background-size: cover;
+        background-position: center;
+        border-radius: 0 0 350px 350px / 0 0 20px 20px; /* 横と縦に別々の丸み */
+    }
+    
+    .home {
+        background-color: #edede9;
+    }
+    
+    .home__img__logo {
+        background: url("https://pas-pol.jp/wp-content/themes/pas-pol/dist/img/siteLogo-sp@2x.png") no-repeat;
+        width: 280px;
+        height: 150px;
+        background-size: contain;
+        background-position: center;
+        display: inline-block;
+        position: relative; /* ホバー時の背景色を表示するために必要 */
+        transition: opacity 0.5s; /* 透明度の変化に1秒かける */
+    }
+    
+    .home__img__menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 0; /* トグルボタンの下に配置 */
+        left: 0;
+        width: 100%;
+        overflow: hidden; /* スライドアニメーションのために必要 */
+    }
+    
+    .home__img__menu.open {
+        display: flex;
+        animation: slideDown 0.7s forwards;
+    }
+    .home__img__menu:not(.open) {
+        display: flex;
+        animation: slideUp 0.7s forwards;
+    }
+    .home__img__toggle.open {
+        animation: slideDown__button 0.7s forwards;
+    }
+    .home__img__toggle:not(.open) {
+        animation: slideUp__button 0.7s forwards;
+    }
+    .home__img__toggle {
+        position: absolute;
+        top: 0;
+        display: block;
+        font-size: 24px;
+        width: 100%;
+        height: 50px;
+        background: none;
+        background-color: white;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .home__img__menu a {
+        text-decoration: none;
+        display: flex; 
+        align-items: center; /* 垂直方向に中央揃え */
+        margin: 0;
+        padding-left: 50px;
+        height: 45px;
+        border-bottom: white solid 1px;
+        color: white;
+        font-size: 15px;
+        position: relative; /* ホバー時の下線を表示するために必要 */
+    }
+    
+    .home__img__menu a::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #343a40; /* 背景色を設定 */
+        opacity: 0.8; /* 背景にだけ透明度を設定 */
+        z-index: -1; /* 背景をテキストの後ろに配置 */
+    }
+    
+    .home__img__logo:hover {
+        opacity: 0.5; /* 半透明に調整 */
+    }
+    
+    .home__message {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .home__message__text {
+        padding-top: 150px;
+        padding-bottom: 150px;
+        line-height: 2;
+        font-size: 20px;
+        letter-spacing: 2px; /* 文字の間隔を広くする */
+    }
+    
+    .home__message__text__h1 {
+        text-align: center;
+    }
+    
+    
+    
+    
+    /* product */
+    .product{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 80px;
+    }
+    .product__block{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30vw;
+        padding: 50px;
+    }
+    .product__block__button{
+        border: black solid 1px;
+        background-color: white;
+        width: 175px;
+        height: 50px;
+        transition: color 0.5s, background-color 0.5s;
+    }
+    .product__block__button:hover{
+        color: white;
+        background-color: black;
+    }
+    
+    .product__link{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10vw;
+        width: 50%;
+    }
+    .product__link__item {
+        display: flex;
+        gap: 20px;
+        position: relative;
+        left: -20vw;
+        align-items: flex-start;
+        text-decoration: none;
+        color: inherit; /* 親要素の色を継承 */
+        font-weight: bold;
+        transition: opacity 0.5s; 
+    }
+    .product__link__item:hover {
+        opacity: 0.5;
+    }
+    .product__link__item__img{
+        width: 150px;
+        height: 200px;
+        border-radius: 5px 30px 30px 5px;
+        object-fit: cover; /* 画像のアスペクト比を維持しながら、要素に収める */
+    }
+    
+    
+    
+    /* NEWS */
+    .news{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #edede9;
+    }
+    .news__block{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30vw;
+        padding: 50px;
+    }
+    .news__block__button{
+        border: black solid 1px;
+        width: 175px;
+        height: 50px;
+        transition: color 0.5s, background-color 0.5s;
+    }
+    .news__block__button:hover{
+        color: white;
+        background-color: black;
+    }
+    
+    .news__link{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transition: opacity 1s;
+    }
+    .news__link :hover{
+        opacity: 0.90;
+    }
+    
+    .news__link__item {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: inherit; /* 親要素の色を継承 */
+        gap: 30px;
+        margin-bottom: 60px;
+        align-items: flex-start; /* 子要素を上詰めで配置 */
+    }
+    .news__link__item__img{
+        width: 350px;
+        height: 200px;
+        object-fit: cover; /* 画像のアスペクト比を維持しながら、要素に収める */
+    }
+    .news__link__item h3,
+    .news__link__item p {
+        margin: 0; /* マージンをなくす */
+    }
+    
+    
+    /* sns */
+    .sns{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .sns__button{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: none;
+        font-size: 150%;
+        background-color: white;
+        margin-top: -15px;
+        transition: transform 0.3s;
+    }
+    
+    .sns__button:hover{
+        transform: scale(1.1) translateY(-7px);
+    }
+    .sns__block{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 20px;
+        padding-bottom: 30px;
+        gap: 50px;
+    }
+    .sns__block__first{
+        border: #0077b6 solid 1px;
+        background-color: white;
+        color: #0077b6;
+        width: 30%;
+        height: 50px;
+        transition: color 0.3s, background-color 0.3s;
+    }
+    .sns__block__first:hover{
+        color: white;
+        background-color: #0077b6;
+    }
+    .sns__block__second{
+        border: #00b4d8 solid 1px;
+        background-color: white;
+        color: #00b4d8;
+        width: 30%;
+        height: 50px;
+        transition: color 0.3s, background-color 0.3s;
+    }
+    .sns__block__second:hover{
+        color: white;
+        background-color: #00b4d8;
+    }
+    .sns__block__third{
+        border: #90e0ef solid 1px;
+        background-color: white;
+        color: #90e0ef;
+        width: 30%;
+        height: 50px;
+        transition: color 0.3s, background-color 0.3s;
+    }
+    .sns__block__third:hover{
+        color: white;
+        background-color: #90e0ef;
+    }
+    
+    
+    
+    /* footer */
+    .footer__menu{
+        background-color: #6c757d;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 30px;
+    }
+    .footer__menu a{
+        text-decoration: none;
+        color:white;
+        font-size: 15px;
+        margin-left: 30px;
+        position: relative; /* ホバー時の下線を表示するために必要 */
+    }
+    .footer__logo{
+        background-color: #343a40;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 200px;
+        padding: 30px;
+    }
+    .footer__logo p{
+        color: white;
+        font-size: 10px;
+    }
+    .footer__logo__img{
+        width: 90px;
+        height: 90px;
+        object-fit: cover; /* 画像のアスペクト比を維持しながら、要素に収める */
+        display: inline-block;
+        position: relative; /* ホバー時の背景色を表示するために必要 */
+        transition: opacity 0.5s; /* 透明度の変化に1秒かける */
+    }
+    .footer__logo__img:hover{ 
+        opacity: 0.5; /* 半透明に調整 */
+    }
+    
+}

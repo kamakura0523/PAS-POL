@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const sns__button = document.querySelector(".sns__button");
+    
+            // .footer__buttonをクリックしたら、ページ上部へスムーズに移動
+            if (sns__button) {
+                sns__button.addEventListener("click", function() {
+                    window.scroll({ top: 0, behavior: "smooth" });
+                });
+            }
+        });
+        document.addEventListener("DOMContentLoaded", function() {
+        const toggleButton = document.querySelector(".home__img__toggle");
+        const menu = document.querySelector(".home__img__menu");
+
+        toggleButton.addEventListener("click", function() {
+            menu.classList.toggle("open");
+            toggleButton.classList.toggle("open");
+        });
+    });
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="home">
+        <div class="home__img">
+            <a href="https://pas-pol.jp/" class="home__img__logo"></a>
+            <div class="home__img__menu">
+                <a href="">TOP</a>
+                <a href="">PRODUCT</a>
+                <a href="">ABOUT</a>
+                <a href="">NEWS</a>
+                <a href="">CONTACT</a>
+            </div>
+            <button class="home__img__toggle">☰</button>
+        </div>
+        <div class="home__message">
+            <section class="home__message__text">
+            <h1 class="home__message__text__h1">旅に出よう</h1>
+            <p >僕たちが作りたいのは<br/>
+                持っているだけで旅に出たくなるモノ。<br/>
+                持っているだけでわくわくするモノ。<br/>
+                <br/>
+                それは新しい時代の “パスポート” <br/>
+                僕たちが作るものは、<br/>
+                そんな、存在でありたい。<br/>
+                <br/>
+                そして、人と人が繋がる<br/>
+                こんな時代だからこそ、<br/>
+                僕たちは、みんなでひとつのモノを<br/>
+                作ることを追求したい。
+            </p>
+            <h1 class="home__message__text__h1">「PAS・POL」</h1>
+            <p class="home__message__end">
+                それは、自分と世界を繋げる<br/>
+                旅のモノづくりブランド
+            </p>
+            </section>
+        </div>
+    </div>
+    <div class="product">
+        <section class="product__block">
+            <h1 class="product__block__title">PRODUCT</h1>
+            <button class="product__block__button">MORE</button>
+        </section>
+        <section class="product__link">
+            <a href="" class="product__link__item">
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/c4/14/10/c41410c0-e6fe-f5ff-a4e4-31daacc0da95/23UMGIM36213.rgb.jpg/1200x1200bf-60.jpg" alt="" class="product__link__item__img">
+                <p>斜陽</p>
+            </a>
+            <a href="" class="product__link__item">
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/80/ec/44/80ec44e0-d0cf-015f-eeb9-ec60eedacbe9/23UMGIM79712.rgb.jpg/1200x1200bf-60.jpg" alt="" class="product__link__item__img">
+                <p>月光浴</p>
+            </a>
+            <a href="" class="product__link__item">
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/9e/e4/3d/9ee43dd8-818c-c085-899c-c27a1e3b82cc/23UM1IM53496.rgb.jpg/1200x1200bb.webp" alt="" class="product__link__item__img">
+                <p>晴る</p>
+            </a>
+            <a href="" class="product__link__item">
+                <img src="https://sp.universal-music.co.jp/yorushika/gentou/img/release-jkt01.jpg" alt=" " class="product__link__item__img">
+                <p>幻燈</p>
+            </a>
+            <a href="" class="product__link__item">
+                <img src="https://s3-aop.plusmember.jp/prod/public/yorushika/contents/discography/c511e005cea2a91ea4eb512db674a7a7.jpeg" alt=" " class="product__link__item__img">
+                <p>チノカテ</p>
+            </a>
+            <a href="" class="product__link__item">
+                <img src="https://i.pinimg.com/736x/42/8f/9b/428f9b0e118d4f5b82e301776c8c40c1.jpg" alt=" " class="product__link__item__img">
+                <p>花に亡霊</p>
+            </a>
+        </section>
+    </div>
+    <div class="news">
+        <section class="news__block">
+            <h1 class="news__block__title">NEWS</h1>
+            <button class="news__block__button">MORE</button>
+        </section>
+        <section class="news__link">
+            <a href="" class="news__link__item">
+                <img src="https://sp.universal-music.co.jp/yorushika/gentou/img/release-jkt01.jpg" alt="" class="news__link__item__img">
+                <div>
+                <h3>hoge</h3>
+                <p>hoge</p>
+                </div>
+            </a>
+            <a href="" class="news__link__item">
+                <img src="https://sp.universal-music.co.jp/yorushika/gentou/img/release-jkt01.jpg" alt="" class="news__link__item__img">
+                <div>
+                <h3>hoge</h3>
+                <p>hoge</p>
+                </div>
+            </a>
+            <a href="" class="news__link__item">
+                <img src="https://sp.universal-music.co.jp/yorushika/gentou/img/release-jkt01.jpg" alt="" class="news__link__item__img">
+                <div>
+                <h3>hoge</h3>
+                <p>hoge</p>
+                </div>
+            </a>
+            <a href="" class="news__link__item">
+                <img src="https://sp.universal-music.co.jp/yorushika/gentou/img/release-jkt01.jpg" alt="" class="news__link__item__img">
+                <div>
+                <h3>hoge</h3>
+                <p>hoge</p>
+                </div>
+            </a>
+        </section>
+    </div>
+    <div class="sns">
+        <button class="sns__button">^</button>
+        <section class="sns__block">
+            <button class="sns__block__first">Share on Facebook</button>
+            <button class="sns__block__second">Share on Twitter</button>
+            <button class="sns__block__third">Hatena Bookmark</button>
+        </section>
+    </div>
+    <div class="footer">
+        <div class="footer__menu">
+            <a href="">TOP</a>
+            <a href="">PRODUCT</a>
+            <a href="">ABOUT</a>
+            <a href="">NEWS</a>
+            <a href="">CONTACT</a>
+        </div>
+        <div class="footer__logo">
+            <a href="https://pas-pol.jp/" >
+                <img src="https://pas-pol.jp/wp-content/themes/pas-pol/dist/img/siteLogo-small@2x.png" alt="" class="footer__logo__img">
+            </a>
+            <p>hogehogehogehogehogehoge</p>
+        </div>
+    </div>
+</body>
+</html>
+
